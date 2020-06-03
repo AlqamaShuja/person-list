@@ -34,9 +34,9 @@ jobs:
     - name: build React App
       run: yarn build
     - name: Install Surge
-      run: npm install --global surge
+      run: npm install -g surge
     - name: Deploy to surge
-      run: surge ./build project-3-alqama.surge.sh {{secrets.SURGE_TOKEN}}
+      run: surge ./build project-3-alqama.surge.sh ${{secrets.SURGE_TOKEN}}
 
 
 
